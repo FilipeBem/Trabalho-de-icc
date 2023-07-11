@@ -14,7 +14,7 @@
     <br>
     <h2>Conteúdo</h2>
     <div>
-      <p>Vamos falar sobre alguns comandos <b>Git</b>, tanto na teoria como explicação. Seguem os comandos:</p>
+      <p>Vamos falar sobre alguns comandos <b>Git</b>, tanto na teoria como na prática. Seguem os comandos:</p>
       <h3>Comando <i>init</i></h3>
       <ul>
         <p>Cria um repositório git vazio na pasta, junto de um branch sem commits. É essencial para o início da funcionaliade do Git.</p>
@@ -24,102 +24,167 @@
       </ul>
       <h3>Comando <i>clone</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Obtem um repositório a partir de um link e adiciona a um diretório novo. É usado para pegar repositórios de lugares como GitHub.</p>
+        <p><b>Uso: </b><code>git clone [seu link]</code></p>
         <p><b>Exemplo Prático: </b></p>
-        <img src="img/git clone.png" alt="img">
       </ul>
       <h3>Comando <i>branch</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>O comando <i>branch</i> possui diversos usos dependendo dos seus parâmetros.</p>
+        <table>
+          <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td><code>git branch</code></td>
+            <td>Lista todos os branches do repositório atual.</td>
+          </tr>
+          <tr>
+            <td><code>git branch [seu branch]</code></td>
+            <td>Cria um novo branch com o nome digitado.</td>
+          </tr>
+          <tr>
+            <td><code>git branch -d [seu branch]&nbsp;&nbsp;&nbsp;</code></td>
+            <td>Deleta o branch com o nome digitado.</td>
+          </tr>
+        </table>
         <p><b>Exemplo Prático: </b></p>
-        <img src="img/git branch.png" alt="img">
       </ul>
       <h3>Comando <i>checkout</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Move entre diferentes branches.</p>
+        <p><b>Uso: </b><code>git checkout [seu branch]</code></p>
         <p><b>Exemplo Prático: </b></p>
-        <img src="img/git checkout.png" alt="img">
       </ul>
       <h3>Comando <i>status</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Lista todos arquivos que ainda devem ser "commitados"</p>
+        <p><b>Uso: </b><code>git status</code></p>
         <p><b>Exemplo Prático: </b></p>
-        <img src="img/git status.png" alt="img">
       </ul>
       <h3>Comando <i>diff</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Mostra as diferenças do arquivo em relação ao <i>index</i> (área de estágio para o próximo commit). </p>
+        <p><b>Uso: </b><code>git diff</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>add</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Adiciona um arquivo para a área de estágio.</p>
+        <p><b>Uso: </b><code>git add [nome do arquivo]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>commit</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Usado para o controle de versões, o <i>commit</i> guarda os arquivos encontrados área de estágio no histórico de versões.</p>
+        <p><b>Uso: </b><code>git commit -m [mensagem/nome para o commit]</code></p>
+        <p>Também pode ser usado o modificador <code>-a</code> para incluir todos arquivos modificados além dos adicionados com o <code>git add</code>.</p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>push</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Envia seu commit para uma branch de um repositório remoto como o GitHub.</p>
+        <p><b>Uso: </b><code>git push [seu repositório remoto] [qual branch]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>pull</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Busca mudanças no repositório remoto e combina estas mudanças ao seu diretório de trabalho.</p>
+        <p><b>Uso: </b><code>git pull [seu repositório remoto] [qual branch]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>revert</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Desfaz algum commit específico sem remover outros commits posteriores. O resultado é um novo commit.</p>
+        <p><b>Uso: </b><code>git revert [commit a ser desfeito]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>merge</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Combina o histórico de um branch ao branch atual.</p>
+        <p><b>Uso: </b><code>git merge [nome do branch]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>stash</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>O comando <i>stash</i> possui diversos usos dependendo dos seus parâmetros.</p>
+        <table>
+          <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td><code>git stash save</code></td>
+            <td>Guarda todos arquivos modificados temporáriamente.</td>
+          </tr>
+          <tr>
+            <td><code>git stash pop</code></td>
+            <td>Restaura os arquivos guradados.</td>
+          </tr>
+          <tr>
+            <td><code>git stash list</code></td>
+            <td>Lista todas mudanças guardadas.</td>
+          </tr>
+          <tr>
+            <td><code>git stash drop&nbsp;&nbsp;&nbsp;</code></td>
+            <td>Descarta as mudanças guardadas.</td>
+          </tr>
+        </table>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>rm</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Deleta um arquivo do seu diretório de trabalho e registra esta remoção no estágio.</p>
+        <p><b>Uso: </b><code>git rm [seu arquivo]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>config</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>É usado para configurar que nome e email serão usados em seus commits.</p>
+        <table>
+          <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td><code>git config –global user.name [seu nome]</code></td>
+            <td>Configura seu nome.</td>
+          </tr>
+          <tr>
+            <td><code>git config –global user.email [seu email]&nbsp;&nbsp;&nbsp;</code></td>
+            <td>Configura seu email.</td>
+          </tr>
+        </table>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>reset</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>O comando <i>reset</i> possui diversos usos dependendo dos seus parâmetros.</p>
+        <table>
+          <tr>
+            <th>Comando</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td><code>git reset [nome do arquivo]</code></td>
+            <td>Tira um arquivo da área de estágio sem mexer no seu conteúdo.</td>
+          </tr>
+          <tr>
+            <td><code>git reset [nome do commit]</code></td>
+            <td>Desfaz todos commits depois do commit digitado e guarda-os localmente.</td>
+          </tr>
+          <tr>
+            <td><code>git reset -hard [nome do commit]&nbsp;&nbsp;&nbsp;</code></td>
+            <td>Desfaz todos commits depois do commit digitado, sem guarda-los.</td>
+          </tr>
+        </table>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>remote</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
+        <p>Para evitar ter que adicionar um link toda vez, o <i>remote</i> permite definir uma variável como seu repositório remoto.</p>
+        <p><b>Uso: </b><code>git remote add [nome da variável] [link do repositório]</code></p>
         <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>fetch</i></h3>
