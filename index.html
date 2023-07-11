@@ -19,14 +19,11 @@
       <ul>
         <p>Cria um repositório git vazio na pasta, junto de um branch sem commits. É essencial para o início da funcionaliade do Git.</p>
         <p><b>Uso: </b><code>git init</code></p>
-        <p><b>Exemplo Prático: </b></p>
-        <img src="img/git init.png" alt="img">
       </ul>
       <h3>Comando <i>clone</i></h3>
       <ul>
         <p>Obtem um repositório a partir de um link e adiciona a um diretório novo. É usado para pegar repositórios de lugares como GitHub.</p>
         <p><b>Uso: </b><code>git clone [seu link]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>branch</i></h3>
       <ul>
@@ -49,62 +46,53 @@
             <td>Deleta o branch com o nome digitado.</td>
           </tr>
         </table>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>checkout</i></h3>
       <ul>
         <p>Move entre diferentes branches.</p>
-        <p><b>Uso: </b><code>git checkout [seu branch]</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p><b>Uso: </b><code>git checkout [branch de destino]</code></p>
       </ul>
       <h3>Comando <i>status</i></h3>
       <ul>
-        <p>Lista todos arquivos que ainda devem ser "commitados"</p>
+        <p>Lista todos arquivos que ainda devem ser "commitados".</p>
         <p><b>Uso: </b><code>git status</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>diff</i></h3>
       <ul>
         <p>Mostra as diferenças do arquivo em relação ao <i>index</i> (área de estágio para o próximo commit). </p>
         <p><b>Uso: </b><code>git diff</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>add</i></h3>
       <ul>
         <p>Adiciona um arquivo para a área de estágio.</p>
         <p><b>Uso: </b><code>git add [nome do arquivo]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>commit</i></h3>
       <ul>
         <p>Usado para o controle de versões, o <i>commit</i> guarda os arquivos encontrados área de estágio no histórico de versões.</p>
         <p><b>Uso: </b><code>git commit -m [mensagem/nome para o commit]</code></p>
         <p>Também pode ser usado o modificador <code>-a</code> para incluir todos arquivos modificados além dos adicionados com o <code>git add</code>.</p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>push</i></h3>
       <ul>
         <p>Envia seu commit para uma branch de um repositório remoto como o GitHub.</p>
         <p><b>Uso: </b><code>git push [seu repositório remoto] [qual branch]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>pull</i></h3>
       <ul>
         <p>Busca mudanças no repositório remoto e combina estas mudanças ao seu diretório de trabalho.</p>
         <p><b>Uso: </b><code>git pull [seu repositório remoto] [qual branch]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>revert</i></h3>
       <ul>
-        <p>Desfaz algum commit específico sem remover outros commits posteriores. O resultado é um novo commit.</p>
+        <p>Desfaz as alterações algum commit específico sem remover outros commits posteriores. O resultado é um novo commit que é uma mistura de branches anteriores e
+        posteriores ao branch especificado.</p>
         <p><b>Uso: </b><code>git revert [commit a ser desfeito]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>merge</i></h3>
       <ul>
-        <p>Combina o histórico de um branch ao branch atual.</p>
+        <p>Combina o histórico de moficações de um branch ao branch atual.</p>
         <p><b>Uso: </b><code>git merge [nome do branch]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>stash</i></h3>
       <ul>
@@ -116,11 +104,11 @@
           </tr>
           <tr>
             <td><code>git stash save</code></td>
-            <td>Guarda todos arquivos modificados temporáriamente.</td>
+            <td>Guarda temporáriamente todos arquivos modificados.</td>
           </tr>
           <tr>
             <td><code>git stash pop</code></td>
-            <td>Restaura os arquivos guradados.</td>
+            <td>Restaura os arquivos guardados.</td>
           </tr>
           <tr>
             <td><code>git stash list</code></td>
@@ -131,13 +119,11 @@
             <td>Descarta as mudanças guardadas.</td>
           </tr>
         </table>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>rm</i></h3>
       <ul>
-        <p>Deleta um arquivo do seu diretório de trabalho e registra esta remoção no estágio.</p>
+        <p>Deleta um arquivo do seu diretório de trabalho e registra esta remoção no index.</p>
         <p><b>Uso: </b><code>git rm [seu arquivo]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>config</i></h3>
       <ul>
@@ -156,7 +142,6 @@
             <td>Configura seu email.</td>
           </tr>
         </table>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>reset</i></h3>
       <ul>
@@ -179,63 +164,51 @@
             <td>Desfaz todos commits depois do commit digitado, sem guarda-los.</td>
           </tr>
         </table>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>remote</i></h3>
       <ul>
         <p>Para evitar ter que adicionar um link toda vez, o <i>remote</i> permite definir uma variável como seu repositório remoto.</p>
         <p><b>Uso: </b><code>git remote add [nome da variável] [link do repositório]</code></p>
-        <p><b>Exemplo Prático: </b></p>
       </ul>
       <h3>Comando <i>fetch</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>O fetch busca mudanças no repositório remoto assim como o pull, mas a diferença é que ele guarda em um branch a parte.
+          É uma forma mais segura de buscar alterações, pois assim não há risco de perder sua área de trabalho atual.</p>
+        <p><b>Uso: </b><code>git fetch [link do repositório]</code></p>
       </ul>
       <h3>Comando <i>show</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>Mostra a metadata e modificações de algum commit especificado.</p>
+        <p><b>Uso: </b><code>git show [seu commit]</code></p>
       </ul>
       <h3>Comando <i>help</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>Fornece uma descrição dos comandos Git mais utilizados.</p>
+        <p><b>Uso: </b><code>Git help</code></p>
+        <p>Se adicionar algum comando git qualquer (<small>ex:</small><code> git help commit</code>), o <i>git help</i> fornecerá uma descrição do comando especificado.</p>
       </ul>
       <h3>Comando <i>rebase</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>Altera a base de um branch de um commit para outro. Utilizado para manter linearidade em projetos.</p>
+        <p><b>Uso: </b><code>git rebase [branch nova base] [branch que queremos mudar a base]</code></p>
       </ul>
       <h3>Comando <i>blame</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>Exibe os metadados de linhas de um arquivo, revelando informações tipo quem foi seu ultimo autor. Usado em depuração.</p>
+        <p><b>Uso: </b><code>git blame [nome do arquivo]</code></p>
       </ul>
       <h3>Comando <i>tag</i></h3>
       <ul>
-        <p>Desc</p>
-        <p><b>Uso: </b><code>Cod</code></p>
-        <p><b>Exemplo Prático: </b></p>
+        <p>Cria uma tag ao estado atual do repositório. Tags são referencias a pontos específicos no histórico - são como uma branch, mas a diferença é que tags são estáticos.
+        Uteis para a classificação de versões.</p>
+        <p><b>Uso: </b><code>git tag [nome de sua tag (ex: v1.2)]</code></p>
       </ul>
     </div>
-    <table>
-        <tr>
-          <th></th>
-          <th></th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-    </table>
+    <h2>Exemplos práticos</h2>
+    <p>Aqui seguem prints de telas com o uso prático dos comandos no desenvolvimento do trabalho.</p>
     <img src="img/terminal pt 1.png" alt="img">
     <img src="img/terminal pt 2.png" alt="img">
+    <img src="img/terminal pt 3.png" alt="img">
     <h2>Links</h2>
     <ul>
     <li>Página com o audio motivacional</li>
